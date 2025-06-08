@@ -1,78 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AutoTradeX</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f172a;
-      color: #f1f5f9;
-    }
-    header {
-      background: #1e293b;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    header p {
-      margin-top: 1rem;
-      font-size: 1.1rem;
-      color: #94a3b8;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    h2 {
-      color: #38bdf8;
-      margin-bottom: 1rem;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 4rem;
-    }
-    .cta button {
-      background-color: #38bdf8;
-      color: #0f172a;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-    .cta button:hover {
-      background-color: #0ea5e9;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>AutoTradeX (ATX)</h1>
-    <p>Autonomous AI-Driven Crypto Futures Trading System</p>
-  </header>
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Video } from "@/components/ui/video";
 
-  <section>
-    <h2>About AutoTradeX</h2>
-    <p>
-      Our agentic AI trading system operates through a fully autonomous multi-agent architecture designed for crypto futures markets.
-      A specialized Opportunity Detection Agent continuously scans all listed futures contracts across major exchanges, leveraging advanced pattern recognition, statistical arbitrage, and deep learning models to identify high-probability trade setups in real time.
-    </p>
-    <p>
-      These insights are transmitted to a Strategic Decision-Making Agent, which evaluates the quality, timing, and market context of each signal. Using a combination of reinforcement learning and dynamic risk assessment, it filters, prioritizes, and autonomously executes trades with precision — eliminating the need for human intervention and enabling 24/7 intelligent trading at scale.
-    </p>
-  </section>
+export default function AutoTradeSummerDive() {
+  return (
+    <div className="space-y-12 px-6 py-12 max-w-5xl mx-auto">
+      {/* Hero Section */}
+      <section className="text-center">
+        <h1 className="text-4xl font-bold text-blue-600">AutoTradeX Summer Dive</h1>
+        <p className="text-lg mt-4 text-gray-700">
+          This summer, ride the waves of crypto with our two‑faced AI.
+        </p>
+      </section>
 
-  <div class="cta">
-    <p>Want to learn more or try it out?</p>
-    <button>Contact Us</button>
-  </div>
-</body>
-</html>
+      {/* Persona Section */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card>
+          <CardContent className="space-y-4 p-4">
+            <img src="/mnt/data/37710bf7-c104-404e-bb14-c18ea0cc8434.png" alt="High-voltage persona" className="rounded-2xl shadow" />
+            <h2 className="text-xl font-semibold">광분(High‑voltage) 자아</h2>
+            <p className="text-sm text-gray-600">
+              Meet the high‑voltage side: diving into volatile tokens with adrenaline and energy!
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="space-y-4 p-4">
+            <img src="/mnt/data/ac826d31-b132-4e7c-9212-4cfd13ba5b64.png" alt="Calm-wave persona" className="rounded-2xl shadow" />
+            <h2 className="text-xl font-semibold">청순(Calm‑wave) 자아</h2>
+            <p className="text-sm text-gray-600">
+              Then there’s the calm wave persona: trading low‑vol tokens with steady confidence.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Performance Section */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card>
+          <CardContent className="space-y-4 p-4">
+            <img src="/mnt/data/d97cdab4-5622-4de0-8c0d-8ff9ff7af2c6.png" alt="High-vol strategy result" className="rounded-2xl shadow" />
+            <h2 className="text-xl font-semibold">광분 자아 결과</h2>
+            <p className="text-sm text-gray-600">
+              High-volatility strategy delivered over $10K daily gains and $38K cumulative profit in one month.
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="space-y-4 p-4">
+            <img src="/mnt/data/거래사진.jpg" alt="Low-vol strategy result" className="rounded-2xl shadow" />
+            <h2 className="text-xl font-semibold">청순 자아 결과</h2>
+            <p className="text-sm text-gray-600">
+              Low-volatility strategy achieved +124% in 30 days — smooth and reliable.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Video Section */}
+      <section className="text-center">
+        <h2 className="text-2xl font-bold mb-4">🎥 Live AI Demo</h2>
+        <video controls className="rounded-2xl mx-auto shadow-lg max-w-full">
+          <source src="/mnt/data/autotrade_record.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p className="mt-2 text-sm text-gray-600">
+          Watch the system in action — live autonomous AI trading, no human intervention.
+        </p>
+      </section>
+
+      {/* CTA Section */}
+      <section className="text-center space-y-4">
+        <p className="text-lg font-medium">Choose your vibe — or dive in with both!</p>
+        <div className="flex justify-center gap-4">
+          <Button variant="default">Read the Whitepaper</Button>
+          <Button variant="outline">View Live Dashboard</Button>
+        </div>
+      </section>
+    </div>
+  );
+}
